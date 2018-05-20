@@ -45,7 +45,7 @@ header .container {
 }
 
 .name, .navigate {
-	/* anti-float alternative */
+	/* couldn't get float to work :-( */
 	display: inline-block;
     vertical-align: middle;
     margin: 0;
@@ -81,7 +81,6 @@ header .container {
 .navigate ul li a {
 	color: #b1adb3;
 	text-decoration: none;
-	-webkit-transition: color .4s;
 	transition: color .4s;
 }
 
@@ -94,7 +93,7 @@ header .container {
 }
 
 .navigate ul li+li {
-	/* See https://www.jackreichert.com/2011/07/how-to-add-a-divider-between-menu-items-in-css-using-only-one-selector/ */
+	/* Adding divider using jackreichart.com resource (nice looking styling) */
     border-left: 1px solid #cccccc;
     border-color: #4aaaa5;
     border-width: 3px;
@@ -105,7 +104,8 @@ header .container {
 .content {
 	width: 960px;
 	clear: both;
-	margin: 0 auto 6em auto;
+	margin: 0 auto 7em auto;
+	align-content: center;
 }
 
 .bold {
@@ -120,8 +120,8 @@ header .container {
 
 .main {
 	display: inline-block;
-	width: 570px;
-	margin: 40px 0;
+	width: 960px;
+	margin: 50px 0;
 	padding: 40px;
 	background-color: #ffffff;
 	border: 1px solid #dddddd;
@@ -131,7 +131,7 @@ header .container {
 	font-size: 2em;
 	font-weight: bold;
 	padding-bottom: 1em;
-	margin-bottom: 0.8em;
+	margin-bottom: 0.7em;
 	border-bottom: 2px solid #dddddd;
 }
 
@@ -152,17 +152,13 @@ img.nutella {
 .portfolio-item {
 	display: inline-block;
 	position: relative;
-	width: 270px;
-	height: 200px;
-	transition: transform .2s ease-out;
+	width: 400px;
+	height: 400px;
 }
 
-.portfolio-item:nth-child(even) {
-	margin-left: 25px;
-}
 
 .portfolio-item:hover {
-	transform: rotate(-4deg) scale(1.1, 1.1);
+	transform: rotate(-5deg) scale(1.1, 1.1);
 }
 
 .item-name {
@@ -172,7 +168,8 @@ img.nutella {
 	background-color: #4aaaa5;
 	padding: 1em;
 	color: #ffffff;
-	z-index: 1000;
+	z-index: 400;
+	width: 160px;
 }
 
 /* Contact Page */
@@ -185,30 +182,16 @@ img.nutella {
 	padding-bottom: 0.5em;
 }
 
+.egg {
+	color: red; 
+}
 .contact input, .contact textarea {
-	width: 100%;
+	width: 927px;
 	border: 1px solid #cccccc;
 	margin-bottom: 1.5em;
 	padding: 1em;
 	font-size: .9em;
 }
-
-.contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
-    color: #cccccc;
-}
-
-.contact input::-moz-placeholder, .contact textarea::-moz-placeholder {
-    color: #cccccc;
-}
-
-.contact input::-ms-placeholder, .contact textarea::-ms-placeholder {
-    color: #cccccc;
-}
-
-.contact input::placeholder, .contact textarea::placeholder {
-    color: #cccccc;
-}
-
 .contact input[type="submit"] {
 	width: auto;
 	background-color: #4aaaa5;
